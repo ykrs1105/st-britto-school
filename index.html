@@ -1,0 +1,95 @@
+<!-- HTML Structure -->
+<div class="announcement-ticker-container">
+  <div class="ticker-title">LATEST NOTICES</div>
+  <div class="ticker-wrap">
+    <div class="ticker-move">
+      <span class="ticker-item">🚨 Admissions are officially open for the Academic Year 2026-2027. Apply online now.</span>
+      <span class="ticker-item">📅 Parent-Teacher Association (PTA) meeting scheduled for this coming Friday.</span>
+      <span class="ticker-item">🏆 Kudos to our Senior Athletics squad for securing 1st place in the Madurai Inter-School Meet!</span>
+    </div>
+  </div>
+</div>
+
+<!-- CSS Structure -->
+<style>
+.announcement-ticker-container {
+  display: flex;
+  background: var(--secondary-color, #0c2340);
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  height: 40px;
+  align-items: center;
+}
+.ticker-title {
+  background: var(--primary-color, #aa1d24);
+  font-weight: bold;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  white-space: nowrap;
+}
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.ticker-move {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: ticker-animation 25s linear infinite;
+}
+.ticker-item {
+  display: inline-block;
+  padding: 0 30px;
+  font-weight: 500;
+}
+@keyframes ticker-animation {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+</style>
+/* St. Britto School - Global Style Tokens */
+:root {
+  --primary-color: #aa1d24;    /* Deep Academic Crimson */
+  --secondary-color: #0c2340;  /* Deep Navy Blue */
+  --accent-color: #d4af37;     /* Heritage Gold */
+  --text-dark: #1a1a1a;        /* High Contrast Charcoal */
+  --bg-light: #f8f9fa;         /* Off-White Section Background */
+  --font-main: 'Poppins', 'Lato', sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+
+/* High-Visibility Headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--secondary-color);
+  letter-spacing: -0.5px;
+}
+
+/* Accessible Call-To-Action Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
